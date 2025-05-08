@@ -1,54 +1,64 @@
-# React + TypeScript + Vite
+🧪 Challenge: “Team Dashboard”
+🕒 Time Limit: 60 minutes
+🧠 Level: Senior
+💻 Stack: React (v18+), TypeScript, Hooks, Context, or any modern state library (Zustand, Jotai, etc.)
+🎯 Objective
+Build a small Team Dashboard that displays a list of employees, allows filtering by role, and shows detailed employee info in a modal or side panel.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✅ Functional Requirements
+1. Employee List
+Fetch from:
 
-Currently, two official plugins are available:
+GET https://jsonplaceholder.typicode.com/users
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Display each user’s:
 
-## Expanding the ESLint configuration
+name
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+email
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+company.name
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Role Filter
+Simulate user roles by randomly assigning a role ("Developer", "Designer", "Manager") to each user on load. Allow the user to filter employees by role using a dropdown.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. Detail View
+Clicking a user opens a modal or drawer showing:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Name
+
+Email
+
+Phone
+
+Address
+
+Company
+
+Role
+
+4. State Management
+Use context or a modern state library to manage user data and filters.
+
+5. Loading/Error Handling
+Show loading and error messages during data fetch.
+
+💡 Bonus (if time permits)
+Use custom hooks (e.g. useEmployees)
+
+Use useMemo/useCallback for performance
+
+Add a unit test for a pure function or component
+
+Add a reusable Modal component
+
+Paginate or lazy load the employee list
+
+🧠 What You’re Being Evaluated On
+Category	Evaluation Focus
+React Expertise	Proper use of hooks, contexts, state isolation
+Architecture	Separation of concerns, reusable components, clean codebase
+Performance	Memoization, avoiding unnecessary re-renders
+UX/Quality	Responsive UI, accessible modal, graceful failure handling
+TypeScript Use	Proper typings, avoiding any, reusable interfaces
+Initiative	Using good tooling or going above and beyond with features
