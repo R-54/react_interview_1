@@ -1,64 +1,49 @@
-🧪 Challenge: “Team Dashboard”
-🕒 Time Limit: 60 minutes
-🧠 Level: Senior
-💻 Stack: React (v18+), TypeScript, Hooks, Context, or any modern state library (Zustand, Jotai, etc.)
+⚙️ Challenge: "Team Dashboard"
+🕒 Duration: 1 Hour
+📈 Level: Senior
+🧰 Tech Stack: React (with Hooks), TypeScript (optional but preferred), Context or another state manager
 🎯 Objective
-Build a small Team Dashboard that displays a list of employees, allows filtering by role, and shows detailed employee info in a modal or side panel.
+Build a small Team Dashboard app that allows viewing, filtering, and sorting a list of team members.
 
-✅ Functional Requirements
-1. Employee List
-Fetch from:
-
+🗃️ Data
+Use this endpoint:
 GET https://jsonplaceholder.typicode.com/users
 
-Display each user’s:
+Each user object includes:
+
+id
 
 name
 
 email
 
+username
+
 company.name
 
-2. Role Filter
-Simulate user roles by randomly assigning a role ("Developer", "Designer", "Manager") to each user on load. Allow the user to filter employees by role using a dropdown.
+address.city
 
-3. Detail View
-Clicking a user opens a modal or drawer showing:
+📌 Requirements
+✅ Must-Haves:
+Fetch and display the list of users
 
-Name
+Each user should be displayed as a card (component)
 
-Email
+Include a search input to filter by name or username
 
-Phone
+Include a dropdown to filter by city
 
-Address
+Include a sort toggle (asc/desc) for names
 
-Company
+Use React Context for global state management
 
-Role
+Use useMemo and useCallback to optimize rendering
 
-4. State Management
-Use context or a modern state library to manage user data and filters.
+💡 Bonus (Optional):
+Show a loading indicator while fetching
 
-5. Loading/Error Handling
-Show loading and error messages during data fetch.
+Graceful error handling if fetch fails
 
-💡 Bonus (if time permits)
-Use custom hooks (e.g. useEmployees)
+Paginate the list (client-side)
 
-Use useMemo/useCallback for performance
-
-Add a unit test for a pure function or component
-
-Add a reusable Modal component
-
-Paginate or lazy load the employee list
-
-🧠 What You’re Being Evaluated On
-Category	Evaluation Focus
-React Expertise	Proper use of hooks, contexts, state isolation
-Architecture	Separation of concerns, reusable components, clean codebase
-Performance	Memoization, avoiding unnecessary re-renders
-UX/Quality	Responsive UI, accessible modal, graceful failure handling
-TypeScript Use	Proper typings, avoiding any, reusable interfaces
-Initiative	Using good tooling or going above and beyond with features
+Add a modal that shows full user details on card click
