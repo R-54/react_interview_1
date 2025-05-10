@@ -1,11 +1,10 @@
 import { useReducer } from "react";
-import "./App.css";
-import { Home } from "./pages/Home";
-import { reducer } from "./state/reducer";
+import { Home } from "./pages/Home/Home";
+import { reducer } from "./state/reducers";
 import { initialState } from "./state/initialState";
 import { AppContext } from "./state/context";
 
-function App() {
+export default function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
@@ -14,5 +13,3 @@ function App() {
     </AppContext.Provider>
   );
 }
-
-export default App;

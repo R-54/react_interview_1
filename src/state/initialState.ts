@@ -1,7 +1,8 @@
 export const initialState = {
-  data: [],
-  loading: false,
+  users: [],
   error: null,
+  loading: false,
   filter: "",
-  employee: null,
+  dropdownFilter: "",
+  reversed: false,
 };
